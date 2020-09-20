@@ -6,4 +6,45 @@
 
 body {
   display: grid;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+
+header {
+}
+
+nav {
+}
+
+main {
+}
+
+footer {
+}
+
+.fp-google-image {
+}
+
+.searchbar {
+}
+
+.search-icon {
+  width: 24px;
+  height: auto;
+}
+
+.search-input {
+}
+
+.mic-icon img {
+  width: 24px;
+  height: auto;
+}
+
+.buttons {
 }
