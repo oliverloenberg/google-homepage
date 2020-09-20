@@ -1,0 +1,1 @@
+This tiny project is created with the intention to practice some basic git commands and recreate googles homepage.
