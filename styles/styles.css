@@ -5,9 +5,8 @@
 }
 
 body {
-  display: grid;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 li {
@@ -16,15 +15,73 @@ li {
 }
 
 header {
+  border: 2px solid blue;
 }
 
-nav {
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-grid {
+  padding: 4px 0px 4px 16px;
+  display: grid;
+  grid-template-columns: 46px 46px 1fr 46px 46px 46px 70px;
+  column-gap: 6px;
+  grid-template-rows: 46px;
+  grid-template-areas: "about store . gmail images apps sign-in";
+  align-items: center;
+}
+
+.about {
+  grid-area: about;
+}
+
+.store {
+  grid-area: store;
+}
+
+.gmail {
+  grid-area: gmail;
+}
+
+.images {
+  grid-area: images;
+}
+
+.apps {
+  grid-area: apps;
+  margin: 0 auto;
+}
+
+.apps svg {
+  display: flex;
+  width: 24px;
+  height: auto;
+  align-items: center;
+}
+
+.sign-in {
+  grid-area: sign-in;
+}
+
+.sign-in button {
+  background-color: #4484f0;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 main {
+  border: 2px solid olivedrab;
+  padding: 10px 10px;
 }
 
 footer {
+  border: 2px solid peru;
+  padding: 10px 10px;
 }
 
 .fp-google-image {
