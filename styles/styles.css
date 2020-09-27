@@ -7,6 +7,8 @@
 body {
   font-family: Arial, sans-serif;
   font-size: 13px;
+  min-height: 100%;
+  width: 100%;
 }
 
 li {
@@ -14,21 +16,25 @@ li {
   list-style: none;
 }
 
-header {
-  border: 2px solid blue;
-}
-
-nav a {
+a {
   text-decoration: none;
   color: black;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/**Header section**/
+header {
+  height: auto;
+}
 .header-grid {
-  padding: 4px 0px 4px 16px;
+  padding: 10px 28px 10px 26px;
   display: grid;
   grid-template-columns: 46px 46px 1fr 46px 46px 46px 70px;
   column-gap: 6px;
-  grid-template-rows: 46px;
+  grid-template-rows: 40px;
   grid-template-areas: "about store . gmail images apps sign-in";
   align-items: center;
 }
@@ -69,23 +75,23 @@ nav a {
   background-color: #4484f0;
   color: white;
   border: none;
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 2px;
   font-weight: bold;
 }
 
+/**Main content section**/
 main {
   height: 90vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-rows: 1.5fr 0.5fr 3fr;
   grid-template-areas:
     "fp-google-image fp-google-image"
     "searchbar searchbar"
     "g-search-btn lucky-btn";
   align-items: center;
   justify-items: center;
-  border: 2px solid olivedrab;
 }
 
 .fp-google-image {
@@ -95,21 +101,23 @@ main {
 
 .searchbar {
   grid-area: searchbar;
-  padding: 6px 6px;
+  padding: 10px 6px;
   display: flex;
   width: 482px;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid grey;
+  border: 1px solid #dfe1e5;
   border-radius: 24px;
 }
 
 .search-icon {
-  width: 24px;
+  width: 20px;
   height: auto;
   margin: 0 8px;
 }
-
+.search-icon path {
+  fill: #9aa0a6;
+}
 .search-input {
   flex: 1;
 }
@@ -125,6 +133,16 @@ main {
   margin: 0 8px;
 }
 
+main button {
+  color: #5f6368;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  margin: 20px 12px 0 0;
+  font-size: 14px;
+}
+
 .g-search-btn {
   grid-area: g-search-btn;
   align-self: start;
@@ -137,18 +155,32 @@ main {
   justify-self: start;
 }
 
-.search-input {
-}
-
 .mic-icon img {
   width: 24px;
   height: auto;
 }
 
-.buttons {
+/**Footer section**/
+footer {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  padding: 10px 10px 10px 28px;
+  background-color: #f2f2f2;
+  font-size: 14px;
 }
 
-footer {
-  border: 2px solid peru;
-  padding: 10px 10px;
+footer a {
+  margin: 0px 26px 0px 0px;
+  text-decoration: none;
+  color: #5f6368;
+}
+
+.blank {
+  flex: 2 1;
 }
